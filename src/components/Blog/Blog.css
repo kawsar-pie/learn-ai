@@ -1,0 +1,28 @@
+.blog{
+    border-radius: 10px;
+    background-color: azure;
+    text-align: justify;
+}
+.blog h2{
+    text-align: center;
+}
+.blog img {
+    height: 200px;
+    width: 300px;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.time-button p{
+    text-align: center;
+    font-weight: 700;
+
+}
+.time-button button{
+    width: 80%;
+    margin: 5% 10% 10% 10%;
+}
+
+.blog-content{
+    padding: 20px;
+}
