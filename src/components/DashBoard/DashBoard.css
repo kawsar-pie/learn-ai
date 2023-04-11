@@ -48,10 +48,7 @@
     padding: auto;
     border-radius: 20px;
 }
-.add-break button:hover{
-    background-color: cadetblue;
-    /* color: azure; */
-}
+
 
 .reading-details-field{
     margin-top: 50px;
@@ -66,3 +63,7 @@
     padding-right: 10px;
     border-radius: 10px;
 }
+/* .add-break button:hover{
+    background-color: cadetblue;
+    color: azure;
+} */
