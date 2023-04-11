@@ -7,17 +7,28 @@ import { addtoDb, getStoredData } from './localDb';
 import Toaster from '../Toaster/Toaster';
 const DashBoard = (props) => {
     const [breaks, setBreaks] = useState(0);
-
+    const [prevClickedId, setPrevClickedId] = useState("10");
     useEffect(()=>{
         const storedBreakTime = getStoredData("break-time");
         setBreaks(storedBreakTime);
-        },[]);
+        document.getElementById("break-field").addEventListener("click", function(event) {
+            var clickedElement = event.target;
+            var clickedElementId = clickedElement.getAttribute("id");
+            if(clickedElementId==="break-field") return;
+            const prevClickedIdField = document.getElementById(prevClickedId);
+            prevClickedIdField.style.backgroundColor = "azure";
+            prevClickedIdField.style.color = "black";
+            const markClicked = document.getElementById(clickedElementId);
+            markClicked.style.backgroundColor = "cadetblue" ;
+            markClicked.style.color = "azure" ;
+            setPrevClickedId(clickedElementId);
+        });
+        },[prevClickedId]);
 
     const addBreak = (duration)=>{
         setBreaks(duration);
         addtoDb(duration,"break-time");
     }
-
     return (
         <div className='dashboard'>
             <div className='personal-info'>
@@ -51,11 +62,11 @@ const DashBoard = (props) => {
                 </div>
             </div>
             <h5 style={{marginTop:"30px",marginBottom:"20px"}}>Add a Break</h5>
-            <div className='add-break'>
-                <button onClick={()=>addBreak(10)}>10s</button>
-                <button onClick={()=>addBreak(20)}>20s</button>
-                <button onClick={()=>addBreak(30)}>30s</button>
-                <button onClick={()=>addBreak(40)}>40s</button>
+            <div className='add-break' id="break-field">
+                <button id="10" onClick={()=>addBreak(10)}>10s</button>
+                <button id="20" onClick={()=>addBreak(20)}>20s</button>
+                <button id="30" onClick={()=>addBreak(30)}>30s</button>
+                <button id="40" onClick={()=>addBreak(40)}>40s</button>
             </div>
             <div className='reading-details-field'>
                 <h5>Reading Details</h5>

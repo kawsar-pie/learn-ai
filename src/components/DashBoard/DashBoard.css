@@ -50,7 +50,7 @@
 }
 .add-break button:hover{
     background-color: cadetblue;
-    color: azure;
+    /* color: azure; */
 }
 
 .reading-details-field{
