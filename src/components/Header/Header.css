@@ -21,6 +21,6 @@
     align-items: center;
 }
 
-.header a:hover{
-    color:green;
+.other-pages a:hover{
+    color:rgba(89, 39, 189, 0.715);
 }

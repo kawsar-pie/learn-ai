@@ -1,0 +1,20 @@
+
+.blogs-dashboard-field{
+    
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    
+}
+.blogs-container{
+    display: grid;
+    padding: 10px;
+    background-color:  #929fa552;;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+@media screen and (max-width:1100px){
+    .products-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
