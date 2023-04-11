@@ -14,11 +14,17 @@ const getStoredData =(type)=>{
         if(prev_reading_time){
             return JSON.parse(prev_reading_time);
         }
+        else{
+            return 0
+        }
     }
     else{
         const prev_break_time = localStorage.getItem("break-time");
         if(prev_break_time){
             return JSON.parse(prev_break_time);
+        }
+        else{
+            return 0;
         }
     }
 }

@@ -11,7 +11,7 @@ const Blog = (props) => {
             </div>
             <div className='time-button'>
                 <p>Time Required: {reading_duration} mins</p>
-                <button className='btn' onClick={()=>props.addReadinTime(reading_duration)} style={{background:"cadetblue",color:"azure"}}>
+                <button className='btn' onClick={()=>props.addReadingTime(reading_duration)} style={{background:"cadetblue",color:"azure"}}>
                     <h6>Add to list</h6>
                 </button>
             </div>

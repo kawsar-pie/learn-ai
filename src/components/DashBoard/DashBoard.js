@@ -4,22 +4,19 @@ import "./DashBoard.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faLocationDot} from '@fortawesome/free-solid-svg-icons'
 import { addtoDb, getStoredData } from './localDb';
-const DashBoard = () => {
+const DashBoard = (props) => {
     const [breaks, setBreaks] = useState(0);
-    const [reads, setReads] = useState(0);
-    // const [buttonColor, setButtonColor] = useState("azure");
+
     useEffect(()=>{
         const storedBreakTime = getStoredData("break-time");
-        const storedReadTime = getStoredData("reading-time");
         setBreaks(storedBreakTime);
-        setReads(storedReadTime);
-        addtoDb(reads,"reading-time")
-        },[breaks,reads])
+        },[]);
+
     const addBreak = (duration)=>{
         setBreaks(duration);
         addtoDb(duration,"break-time");
-        // setButtonColor("cadetblue");
     }
+    
     return (
         <div className='dashboard'>
             <div className='personal-info'>
@@ -64,7 +61,7 @@ const DashBoard = () => {
                 <div className='reading-details-info'>
                     <div style={{display:"flex",justifyContent:"space-between"}}>
                         <h6>Reading Time </h6>
-                        <h6 style={{color:"gray"}}>{reads} mins</h6>
+                        <h6 style={{color:"gray"}}>{props.duration} mins</h6>
                     </div>
                 </div>
                 <div className='reading-details-info'>
