@@ -4,6 +4,7 @@ import "./DashBoard.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faLocationDot} from '@fortawesome/free-solid-svg-icons'
 import { addtoDb, getStoredData } from './localDb';
+import Toaster from '../Toaster/Toaster';
 const DashBoard = (props) => {
     const [breaks, setBreaks] = useState(0);
 
@@ -16,7 +17,7 @@ const DashBoard = (props) => {
         setBreaks(duration);
         addtoDb(duration,"break-time");
     }
-    
+
     return (
         <div className='dashboard'>
             <div className='personal-info'>
@@ -71,9 +72,8 @@ const DashBoard = (props) => {
                     </div>
                 </div>
             </div>
-            <button className='btn' style={{background:"cadetblue",color:"azure",width:"100%"}}>
-                    <h6>Activity Completed</h6>
-                </button>
+            <Toaster></Toaster>
+            
         </div>
     );
 };
