@@ -1,0 +1,68 @@
+.dashboard {
+    position: sticky;
+    top: 0px;
+    padding: 20px 20px;
+}
+
+.dashboard img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.personal-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.physical-info{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #929fa552;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+.add-break{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #929fa552;
+    padding: 20px;
+    border-radius: 10px;
+}
+.add-break button{
+    
+    border: 0px;
+    /* display: inline-block; */
+    width: 35px;
+    height: 35px;
+    background-color: azure;
+    color: black;
+    text-align: center;
+    /* line-height: 50px; */
+    text-decoration: none;
+    padding: auto;
+    border-radius: 20px;
+}
+.add-break button:hover{
+    background-color: cadetblue;
+    color: azure;
+}
+
+.reading-details-field{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.reading-details-info{
+    margin-top: 30px;
+    background-color: #929fa552;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
