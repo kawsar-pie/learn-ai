@@ -73,7 +73,6 @@ const DashBoard = (props) => {
                 </div>
             </div>
             <Toaster></Toaster>
-            
         </div>
     );
 };
