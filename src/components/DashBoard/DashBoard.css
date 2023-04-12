@@ -10,13 +10,14 @@
     border-radius: 50%;
 }
 
-.personal-info{
+.personal-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
 }
-.physical-info{
+
+.physical-info {
     display: flex;
     justify-content: space-evenly;
     background-color: #929fa552;
@@ -26,7 +27,7 @@
     border-radius: 10px;
 }
 
-.add-break{
+.add-break {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -34,8 +35,9 @@
     padding: 20px;
     border-radius: 10px;
 }
-.add-break button{
-    
+
+.add-break button {
+
     border: 0px;
     /* display: inline-block; */
     width: 35px;
@@ -50,19 +52,21 @@
 }
 
 
-.reading-details-field{
+.reading-details-field {
     margin-top: 50px;
     margin-bottom: 50px;
 }
-.reading-details-info{
+
+.reading-details-info {
     margin-top: 30px;
     background-color: #929fa552;
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 11px;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 10px;
 }
+
 /* .add-break button:hover{
     background-color: cadetblue;
     color: azure;

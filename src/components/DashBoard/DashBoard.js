@@ -11,7 +11,7 @@ const DashBoard = (props) => {
     useEffect(()=>{
         const storedBreakTime = getStoredData("break-time");
         setBreaks(storedBreakTime);
-        setPrevClickedId((storedBreakTime).toString());
+        // setPrevClickedId((storedBreakTime).toString());
         document.getElementById("break-field").addEventListener("click", function(event) {
             var clickedElement = event.target;
             var clickedElementId = clickedElement.getAttribute("id");
@@ -24,7 +24,7 @@ const DashBoard = (props) => {
             markClicked.style.color = "azure" ;
             setPrevClickedId(clickedElementId);
         });
-        },[prevClickedId,breaks]);
+        },[prevClickedId]);
 
     const addBreak = (duration)=>{
         setBreaks(duration);
