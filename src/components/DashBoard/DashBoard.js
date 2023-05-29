@@ -20,11 +20,11 @@ const DashBoard = (props) => {
             prevClickedIdField.style.backgroundColor = "azure";
             prevClickedIdField.style.color = "black";
             const markClicked = document.getElementById(clickedElementId);
-            markClicked.style.backgroundColor = "cadetblue" ;
-            markClicked.style.color = "azure" ;
+            markClicked.style.backgroundColor = "cadetblue";
+            markClicked.style.color = "azure";
             setPrevClickedId(clickedElementId);
         });
-        },[prevClickedId]);
+        },[breaks, prevClickedId]);
 
     const addBreak = (duration)=>{
         setBreaks(duration);
